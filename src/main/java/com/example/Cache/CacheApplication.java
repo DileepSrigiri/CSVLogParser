@@ -37,8 +37,8 @@ public class CacheApplication {
 		for (int i = 0; i < stats.size(); i++) {
 			System.out.print("method :" + stats.get(i).getHttpRequestMethod().toString() + " ");
 			System.out.print("URL :" + stats.get(i).getUrl() + " ");
-			System.out.print("Min Time :" + stats.get(i).getMinResponseTime());
-			System.out.print("Max Time :" + stats.get(i).getMaxResponseTime());
+			System.out.print("Min Time :" + stats.get(i).getMinResponseTime() +"   ");
+			System.out.print("Max Time :" + stats.get(i).getMaxResponseTime() +" ");
 			System.out.print("Average Time :" + Double
 					.parseDouble(String.format("%.2f", stats.get(i).getAverageResponseTime())));
 			System.out.println();

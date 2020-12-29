@@ -5,14 +5,15 @@ public abstract class URLUtil {
 	public static final String maskURL(String url) {
 		String[] splits = url.split("/");
 		StringBuilder sb = new StringBuilder();
-		sb.append("/");
 		for (int i = 0; i < splits.length; i++) {
 			if (isInteger(splits[i])) {
 				sb.append("{id}");
 			} else {
 				sb.append(splits[i]);
 			}
-			sb.append("/");
+			if (i != splits.length - 1) {
+				sb.append("/");
+			}
 		}
 		return sb.toString();
 	}
